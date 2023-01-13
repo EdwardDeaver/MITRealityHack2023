@@ -1,9 +1,7 @@
-// 
-
-
-
-
-
+#include <BluetoothSerial.h>
+#include <ArduinoJson.h>
+BluetoothSerial BTSerial;
+StaticJsonDocument<200> doc;
 const int trigPin = 5;
 const int echoPin = 18;
 
@@ -14,15 +12,23 @@ const int echoPin = 18;
 long duration;
 float distanceCm;
 float distanceInch;
-
+// the setup routine runs on start and once when you press reset:
 void setup() {
-  Serial.begin(115200); // Starts the serial communication
+
+
+  String name = "Jacobs-ESP32";
+  Serial.begin(9600);
+  // initialize serial communication at 9600 bits per second:
+  BTSerial.begin(name);
+  Serial.println("Bluetooth Started... Called: " + name);
+  doc["status"] = "running";
+  doc["name"] = name;
+
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
 }
-
-void loop() {
-  // Clears the trigPin
+void DistanceData(){
+    // Clears the trigPin
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   // Sets the trigPin on HIGH state for 10 micro seconds
@@ -40,10 +46,15 @@ void loop() {
   distanceInch = distanceCm * CM_TO_INCH;
   
   // Prints the distance in the Serial Monitor
-  Serial.print("Distance (cm): ");
-  Serial.println(distanceCm);
-  Serial.print("Distance (inch): ");
-  Serial.println(distanceInch);
-  
-  delay(200);
+   doc["distance"] = distanceInch;
+  serializeJson(doc, BTSerial);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+
+  DistanceData();
+  delay(1000);
+ 
+
 }
