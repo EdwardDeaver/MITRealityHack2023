@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.csound.csoundunity": {
+      "version": "https://github.com/rorywalsh/CsoundUnity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "39d8d3ed32f0f3db492dcb160973166fcdf43649"
+    },
     "com.unity.burst": {
       "version": "1.8.2",
       "depth": 1,

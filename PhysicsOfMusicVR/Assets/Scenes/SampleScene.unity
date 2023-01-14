@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Light:
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_InnerSpotAngle: 21.802082
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -217,6 +218,343 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &760610539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760610540}
+  - component: {fileID: 760610543}
+  - component: {fileID: 760610542}
+  - component: {fileID: 760610541}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760610540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760610539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760610541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760610539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94606e3a067e5a14bbb630d939682af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequencyField: 60
+  amplitudeField: 1
+  gainField: 1
+  lfoField: 100
+  tableField: 3.99
+  _freqRange: {x: 700, y: 800}
+--- !u!114 &760610542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760610539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d20258c641c94f0ea3dc32cfe3de904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logCsoundOutput: 0
+  mute: 0
+  processClipAudio: 0
+  loudVolumeWarning: 1
+  loudWarningThreshold: 10
+  csoundScore: 
+  environmentSettings: []
+  _csoundFileGUID: 01ca48f4df517224d808d6d3145508e9
+  _csoundString: "<Cabbage> bounds(0, 0, 0, 0)\r\nform caption(\"Theremin\") size(700,
+    300), guiMode(\"queue\"), pluginId(\"thm1\")\r\nrslider    bounds(  0, 40, 80,
+    80), valueTextBox(1), textBox(1), text(\"Att.\"), channel(\"Attack\"),  range(0, 
+    5, 0.15)\r\nrslider    bounds(100, 40, 80, 80), valueTextBox(1), textBox(1),
+    text(\"Gain\"), channel(\"Gain\"),  range(0,  1, 0.65)\r\nrslider    bounds(200,
+    40, 80, 80), valueTextBox(1), textBox(1), text(\"Glide\"), channel(\"Glide\"), 
+    range(0,  1, 0.15)\r\nrslider    bounds(300, 40, 80, 80), valueTextBox(1), textBox(1),
+    text(\"Lfo Freq\"), channel(\"Lfo\"),  range(0,  100, 7)\r\nrslider    bounds(300,
+    40, 80, 80), valueTextBox(1), textBox(1), text(\"Lfo Amp\"), channel(\"LfoAmp\"), 
+    range(0,  100, 8.5)\r\nrslider    bounds(400, 40, 80, 80), valueTextBox(1), textBox(1),
+    text(\"Filter Freq\"), channel(\"FiltFreq\"),  range(100,  5000, 1000)\r\nrslider   
+    bounds(500, 40, 80, 80), valueTextBox(1), textBox(1), text(\"Filter Res\"), channel(\"FiltRes\"), 
+    range(0,  0.95, .066)\r\nrslider    bounds(600, 40, 80, 80), valueTextBox(1),
+    textBox(1), text(\"Table\"), channel(\"Table\"),  range(0,  3.99, 1.5)\r\n</Cabbage>\r\n<CsoundSynthesizer>\r\n<CsOptions>\r\n-n
+    -d \r\n</CsOptions>\r\n<CsInstruments>\r\nsr = 48000\r\nksmps = 64\r\nnchnls
+    = 2\r\n0dbfs = 1\r\n\r\nchn_k \"Frequency\", 1\r\nchn_k \"Amplitude\", 1 \r\n\r\n;courtesy
+    Iain McCurdy\r\nopcode    lineto2,k,kk\r\n kinput,ktime    xin\r\n ktrig    changed   
+    kinput,ktime    ; reset trigger\r\n if ktrig==1 then                    ; if
+    new note has been received or if portamento time has been changed...\r\n  reinit
+    RESTART\r\n endif\r\n RESTART:                            ; restart 'linseg'
+    envelope\r\n if i(ktime)==0 then                 ; 'linseg' fails if duration
+    is zero...\r\n  koutput    =    i(kinput)          ; ...in which case output
+    simply equals input\r\n else\r\n  koutput    linseg    i(koutput),i(ktime),i(kinput)   
+    ; linseg envelope from old value to new value\r\n endif\r\n rireturn\r\n        
+    xout    koutput\r\nendop\r\n\r\n\r\ninstr 1\r\n\r\nkat chnget \"Attack\"\r\nkport
+    chnget \"Glide\"\r\nkfreq chnget \"Frequency\"\r\nkamp chnget \"Amplitude\"\r\nklfo
+    chnget \"Lfo\"\r\nklfoamp chnget \"LfoAmp\"\r\nkfiltf chnget \"FiltFreq\"\r\nkfiltres
+    chnget \"FiltRes\"\r\nkgain chnget \"Gain\"\r\nktable chnget \"Table\"\r\nkPortTime
+    linseg  0, 0.001, 1\r\nkEnvTime linseg 0, 0.001, 1\r\n\r\nkcps     lineto2   
+    kfreq, kPortTime * kport    \r\nkenv     lineto2    kamp, kEnvTime * kat \r\nkff     
+    lineto2    kfiltf, 0.01\r\nkfr      lineto2    kfiltres, 0.01\r\n\r\nalfo lfo
+    klfoamp, klfo, 0\r\nftmorf ktable, 99, 100\r\naosc oscili kenv, kcps + alfo,
+    100\r\naout moogladder aosc, kff, kfr\r\n\r\n; left right output\r\nouts aout*kgain,
+    aout*kgain\r\nendin\r\n\r\n</CsInstruments>\r\n<CsScore>\r\n;causes Csound to
+    run for about 7000 years...\r\nf0 3600\r\nf1 0 16384 10 1                                         
+    ; Sine\r\nf2 0 16384 10 1 0.5 0.3 0.25 0.2 0.167 0.14 0.125 .111   ; Sawtooth\r\nf3
+    0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ; Square\r\nf4 0 16384
+    10 1 1   1   1    0.7 0.5   0.3  0.1          ; Pulse\r\nf5 0 16384 10 1 0.3
+    0.05 0.1 0.01                        ; Custom\r\nf99  0 5 -2 1 2 3 4 5                                   
+    ; the table that contains the numbers of tables used by ftmorf\r\nf100 0 16384
+    10 1                                        ; the table that will be written
+    by ftmorf\r\ni1 0 3600\r\n</CsScore>\r\n</CsoundSynthesizer>\r\n\r\n"
+  _csoundFileName: Theremin.csd
+  _csoundAsset: {fileID: 102900000, guid: 01ca48f4df517224d808d6d3145508e9, type: 3}
+  _channels:
+  - type: form
+    channel: 
+    text: 
+    caption: Theremin
+    min: 0
+    max: 0
+    value: 0
+    skew: 0
+    increment: 0
+    options: []
+  - type: rslider
+    channel: Attack
+    text: Att.
+    caption: 
+    min: 0
+    max: 5
+    value: 0.15
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: Gain
+    text: Gain
+    caption: 
+    min: 0
+    max: 1
+    value: 0.65
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: Glide
+    text: Glide
+    caption: 
+    min: 0
+    max: 1
+    value: 0.15
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: Lfo
+    text: Lfo Freq
+    caption: 
+    min: 0
+    max: 100
+    value: 7
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: LfoAmp
+    text: Lfo Amp
+    caption: 
+    min: 0
+    max: 100
+    value: 8.5
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: FiltFreq
+    text: Filter Freq
+    caption: 
+    min: 100
+    max: 5000
+    value: 1000
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: FiltRes
+    text: Filter Res
+    caption: 
+    min: 0
+    max: 0.95
+    value: 0.066
+    skew: 1
+    increment: 1
+    options: []
+  - type: rslider
+    channel: Table
+    text: Table
+    caption: 
+    min: 0
+    max: 3.99
+    value: 1.5
+    skew: 1
+    increment: 1
+    options: []
+  _availableAudioChannels: []
+  _drawCsoundString: 0
+  _drawTestScore: 0
+  _drawSettings: 0
+  _drawChannels: 0
+  _drawAudioChannels: 0
+  _drawPresets: 0
+  _drawPresetsLoad: 0
+  _drawPresetsSave: 0
+  _drawPresetsImport: 0
+  _showRuntimeEnvironmentPath: 0
+  _currentPreset: 
+  _currentPresetSaveFolder: 
+  _currentPresetLoadFolder: 
+--- !u!82 &760610543
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760610539}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,102 +638,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1906164272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1906164276}
-  - component: {fileID: 1906164275}
-  - component: {fileID: 1906164274}
-  - component: {fileID: 1906164273}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &1906164273
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906164272}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1906164274
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906164272}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1906164275
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906164272}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1906164276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906164272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
