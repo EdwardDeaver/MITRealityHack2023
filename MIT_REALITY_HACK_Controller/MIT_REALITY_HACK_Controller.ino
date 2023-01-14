@@ -1,7 +1,7 @@
 #include <BluetoothSerial.h>
 #include <ArduinoJson.h>
 BluetoothSerial BTSerial;
-StaticJsonDocument<200> doc;
+StaticJsonDocument<800> doc;
 const int trigPin = 5;
 const int echoPin = 18;
 
@@ -27,7 +27,10 @@ void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
 }
-void DistanceData(){
+void UpdateJson(String field, int value){
+  doc[field] = value; 
+}
+float DistanceData(){
     // Clears the trigPin
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
@@ -45,16 +48,17 @@ void DistanceData(){
   // Convert to inches
   distanceInch = distanceCm * CM_TO_INCH;
   
-  // Prints the distance in the Serial Monitor
-   doc["distance"] = distanceInch;
-  serializeJson(doc, BTSerial);
+  return distanceCm; 
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
 
-  DistanceData();
-  delay(1000);
+  UpdateJson("UltrasonicP18", DistanceData());
+  Update("ButtonSensor", ButtonDataGrabber()); 
+  serializeJson(doc, BTSerial);
+  BTSerial.println();
+  delay(100);
  
 
 }
