@@ -52,7 +52,6 @@ kfiltf chnget "FiltFreq"
 kfiltres chnget "FiltRes"
 kgain chnget "Gain"
 ktable chnget "Table"
-
 kPortTime linseg  0, 0.001, 1
 kEnvTime linseg 0, 0.001, 1
 
@@ -66,6 +65,7 @@ ftmorf ktable, 99, 100
 aosc oscili kenv, kcps + alfo, 100
 aout moogladder aosc, kff, kfr
 
+; left right output
 outs aout*kgain, aout*kgain
 endin
 

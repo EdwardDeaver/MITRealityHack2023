@@ -19,13 +19,7 @@ namespace Csound.BasicFMSynth
 
             var mPos = Input.mousePosition;
 
-
-                _csound.SetChannel("car_table", CsoundUnity.Remap(mPos.x, 0, Screen.width, 0, 3.99f, true));
-                _csound.SetChannel("mod_table", CsoundUnity.Remap(mPos.y, 0, Screen.height, 0, 3.99f, true));
-                 _csound.SetChannel("car_freq", 440);
-                _csound.SetChannel("mod_freq", 440);
-
-         /*   if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 _csound.SetChannel("car_table", CsoundUnity.Remap(mPos.x, 0, Screen.width, 0, 3.99f, true));
                 _csound.SetChannel("mod_table", CsoundUnity.Remap(mPos.y, 0, Screen.height, 0, 3.99f, true));
@@ -35,7 +29,6 @@ namespace Csound.BasicFMSynth
                 _csound.SetChannel("car_freq", CsoundUnity.Remap(mPos.x, 0, Screen.width, 0, 1000, true));
                 _csound.SetChannel("mod_freq", CsoundUnity.Remap(mPos.y, 0, Screen.height, 0, 1000, true));
             }
-            */
         }
     }
 }
