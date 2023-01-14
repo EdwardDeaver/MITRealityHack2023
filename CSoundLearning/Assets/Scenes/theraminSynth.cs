@@ -60,15 +60,17 @@ public class theraminSynth : MonoBehaviour    {
         // amplitudeField should be 0 - 1f) 
         public void setAmplitude(float Amplitude){
             _csound.SetChannel("Amplitude", amplitudeField);
-        }    
+        }  
+        public void setFrequency(float Frequency){
+            _csound.SetChannel("Frequency", Frequency);
+        }     
         // position - button position on  fret board 0 at top 
 
         public void playNote(float position){
             _csound.SetChannel("Frequency", frequencyField * (position * 1.5));
         }
         public void changeLFO(float lfoVariable){
-            _csound.SetChannel("Frequency", lfoVariable);
-            _csound.SetChannel("Amplitude", amplitudeField);
+            _csound.SetChannel("Lfo", lfoVariable);
         }
     }
 }
