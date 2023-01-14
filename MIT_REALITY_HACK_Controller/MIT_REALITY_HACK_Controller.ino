@@ -55,8 +55,8 @@ float DistanceData(){
 void loop() {
 
   UpdateJson("UltrasonicP18", DistanceData());
-  Update("ButtonSensor", ButtonDataGrabber()); 
   serializeJson(doc, BTSerial);
+  BTSerial.println();
   delay(100);
  
 
