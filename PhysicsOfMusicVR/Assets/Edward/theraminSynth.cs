@@ -69,7 +69,7 @@ public class theraminSynth : MonoBehaviour    {
         // position - button position on  fret board 0 at top 
 
         public void playNote(float position){
-            _csound.SetChannel("Frequency", frequencyField * (position * 1.5));
+            _csound.SetChannel("Frequency", frequencyField * (position * 1.5f));
         }
         public void changeLFO(float lfoVariable){
             lfoField = lfoVariable;
