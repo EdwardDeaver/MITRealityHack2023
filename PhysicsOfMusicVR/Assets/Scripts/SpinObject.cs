@@ -6,7 +6,6 @@ public class SpinObject : MonoBehaviour
 {
         Transform pivotPoint;
     public float RotationSpeed = 0.1f;
-
     public bool RotateAxisX = false;
     public bool RotateAxisY = false;
     public bool RotateAxisZ = false;

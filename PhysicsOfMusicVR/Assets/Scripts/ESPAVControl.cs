@@ -7,6 +7,7 @@ using UnityEngine.VFX;
 public class ESPAVControl : MonoBehaviour
 {
     public JSONResponseModel _jsonResponseModel;
+    public List<Csound.TableMorph.Theremin.theraminSynth> _theraminSynths;
     public List<AudioSource> _audioObjects;
     public List<VisualEffect> _particleWaves;
 
@@ -49,6 +50,15 @@ public class ESPAVControl : MonoBehaviour
 
     void LinkVFX()
     {
+        if(_theraminSynths.Count >0 && _particleWaves.Count >0)
+        {
+            for(int i = 0; i < _particleWaves.Count; i++)
+            {
+                _particleWaves[i].SetFloat("Frequency", _theraminSynths[i].frequencyField);
+                _particleWaves[i].SetFloat("Amplitude", _theraminSynths[i].amplitudeField);
+                _particleWaves[i].SetFloat("LFO", _theraminSynths[i].lfoField);
+            }
+        }
         if(_jsonResponseModel.NOTE1)
         {
             _particleWaves[0].SendEvent(_vfxPlayEvent);

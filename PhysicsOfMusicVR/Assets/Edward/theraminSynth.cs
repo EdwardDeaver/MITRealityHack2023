@@ -21,7 +21,7 @@ public class theraminSynth : MonoBehaviour    {
         [SerializeField] Vector2 _freqRange = new Vector2(700, 800);
         CsoundUnity _csound;
 
-
+        public float _freqBase;
 
         IEnumerator Start()
         {
@@ -41,6 +41,7 @@ public class theraminSynth : MonoBehaviour    {
         {
             amplitudeField = _jsonResponseModel.AMP;
             lfoField = _jsonResponseModel.LFO;
+            frequencyField = _freqBase + _jsonResponseModel.FREQ;
             
             if (!_csound.IsInitialized)
                 return;
@@ -50,6 +51,10 @@ public class theraminSynth : MonoBehaviour    {
             _csound.SetChannel("Gain", gainField);
             _csound.SetChannel("Lfo", lfoField);
             _csound.SetChannel("Table", tableField);
+
+            // _csound.SetChannel("Amplitude", _jsonResponseModel.AMP);
+            // _csound.SetChannel("Gain", _jsonResponseModel.FREQ);
+            // _csound.SetChannel("Lfo", _jsonResponseModel.LFO);
 
         }
 

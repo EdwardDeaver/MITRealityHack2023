@@ -59,11 +59,11 @@ public class JSONResponseModel : MonoBehaviour
         {
             JsonUtility.FromJsonOverwrite(savedData, this);
             this.AMP = this.Pot1P33;
-            this.AMP = Mathf.Lerp(0.0f, 1.0f, this.AMP);
+            this.AMP = Mathf.Lerp(0.1f, 2.0f, this.AMP);
             this.LFO = this.Pot2P25;
-            this.LFO = Mathf.Lerp(0.0f, 16.0f, this.AMP);
+            this.LFO = Mathf.Lerp(0.0f, 16.0f, this.LFO);
             this.FREQ = this.Pot3P26;
-            this.FREQ = Mathf.Lerp(0.0f, 2048.0f, this.FREQ);
+            this.FREQ = Mathf.Lerp(1.0f, 2.0f, this.FREQ);
             this.NOTE1 = !(this.Fret1P23);
             this.NOTE2 = !(this.Fret2P22);
             this.NOTE3 = !(this.Fret3P21);
