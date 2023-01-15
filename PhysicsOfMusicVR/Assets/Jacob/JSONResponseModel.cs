@@ -22,33 +22,33 @@ public class JSONResponseModel : MonoBehaviour
     public float Pot1P33;
     public float Pot2P25;
     public float Pot3P26;
-    public TMP_Text FREQTEXT;
-    public TMP_Text AMPTEXT;
-    public TMP_Text LFOTEXT;
-    public TMP_Text BUTTON1TEXT;
-    public TMP_Text BUTTON2TEXT;
-    public TMP_Text BUTTON3TEXT;
-    public TMP_Text BUTTON4TEXT;
-    public TMP_Text STRUM_TEXT;
+    // public TMP_Text FREQTEXT;
+    // public TMP_Text AMPTEXT;
+    // public TMP_Text LFOTEXT;
+    // public TMP_Text BUTTON1TEXT;
+    // public TMP_Text BUTTON2TEXT;
+    // public TMP_Text BUTTON3TEXT;
+    // public TMP_Text BUTTON4TEXT;
+    // public TMP_Text STRUM_TEXT;
 
     void Update()
     {
 
-        FREQTEXT.text = this.FREQ.ToString();
-        Debug.Log(Pot1P33.ToString());
+        //FREQTEXT.text = this.FREQ.ToString();
+       // Debug.Log(Pot1P33.ToString());
 
-        AMPTEXT.text = this.AMP.ToString();
-        Debug.Log(Pot2P25.ToString());
+        //AMPTEXT.text = this.AMP.ToString();
+       // Debug.Log(Pot2P25.ToString());
 
-        LFOTEXT.text = this.LFO.ToString();
-        Debug.Log(Pot3P26.ToString());
+        //LFOTEXT.text = this.LFO.ToString();
+       // Debug.Log(Pot3P26.ToString());
 
-        BUTTON1TEXT.text = this.NOTE1.ToString();
-        BUTTON2TEXT.text = this.NOTE2.ToString();
-        BUTTON3TEXT.text = this.NOTE3.ToString();
-        BUTTON4TEXT.text = this.NOTE4.ToString();
+        // BUTTON1TEXT.text = this.NOTE1.ToString();
+        // BUTTON2TEXT.text = this.NOTE2.ToString();
+        // BUTTON3TEXT.text = this.NOTE3.ToString();
+        // BUTTON4TEXT.text = this.NOTE4.ToString();
 
-        STRUM_TEXT.text = this.STRUM.ToString(); 
+        //STRUM_TEXT.text = this.STRUM.ToString(); 
     }
 
     public void onMessage(string savedData)
