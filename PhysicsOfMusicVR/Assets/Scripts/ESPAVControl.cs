@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
-
+using Sngty;
 
 public class ESPAVControl : MonoBehaviour
 {
     public JSONResponseModel _jsonResponseModel;
     public List<Csound.TableMorph.Theremin.theraminSynth> _theraminSynths;
+    public SingularityManager _singularityManager;
     public List<AudioSource> _audioObjects;
     public List<VisualEffect> _particleWaves;
+
+    public BluetoothUIManager _bluetoothUIManager;
 
     public string _vfxStopEvent = "OnStop";
     public string _vfxPlayEvent = "OnPlay";
@@ -31,8 +34,15 @@ public class ESPAVControl : MonoBehaviour
                 _particleWaves[i].SendEvent(_vfxStopEvent);
             }
         }
+        StartCoroutine(ConnectToESP());
     }
 
+    IEnumerator ConnectToESP()
+    {
+        yield return new WaitForSeconds(5f);
+        _singularityManager.ConnectToDevice(_bluetoothUIManager.TheDevice);
+    }
+    
     // Update is called once per frame
     void Update()
     {

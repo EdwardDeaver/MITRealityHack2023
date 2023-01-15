@@ -1142,6 +1142,7 @@ MonoBehaviour:
   tableField: 3.99
   _jsonResponseModel: {fileID: 263907725}
   _freqRange: {x: 700, y: 800}
+  _freqBase: 0
 --- !u!114 &308828262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,6 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jsonResponseModel: {fileID: 263907725}
+  _theraminSynths: []
   _audioObjects:
   - {fileID: 760610543}
   - {fileID: 1249151911}
@@ -1689,6 +1691,7 @@ MonoBehaviour:
   tableField: 3.99
   _jsonResponseModel: {fileID: 263907725}
   _freqRange: {x: 700, y: 800}
+  _freqBase: 0
 --- !u!114 &760610542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,9 +2266,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.91
       objectReference: {fileID: 0}
+    - target: {fileID: 1810694187934517914, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 961739752}
     - target: {fileID: 1810694188411452206, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188411452207, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3601,6 +3608,7 @@ MonoBehaviour:
   tableField: 3.99
   _jsonResponseModel: {fileID: 263907725}
   _freqRange: {x: 700, y: 800}
+  _freqBase: 0
 --- !u!114 &1175998289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4081,6 +4089,7 @@ MonoBehaviour:
   tableField: 3.99
   _jsonResponseModel: {fileID: 263907725}
   _freqRange: {x: 700, y: 800}
+  _freqBase: 0
 --- !u!114 &1249151910
 MonoBehaviour:
   m_ObjectHideFlags: 0

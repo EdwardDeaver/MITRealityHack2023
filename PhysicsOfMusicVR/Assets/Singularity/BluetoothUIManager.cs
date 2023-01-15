@@ -23,6 +23,7 @@ public class BluetoothUIManager : MonoBehaviour
     private Sngty.DeviceSignature thisDevice;
 
     List<string> activeMessages = new List<string>();
+    public Sngty.DeviceSignature TheDevice => devices[0];
     public int maxMessages = 7;
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,7 @@ public class BluetoothUIManager : MonoBehaviour
         state = uistate.Connecting;
         thisDevice = devices[dropdown.value];
         singularity.ConnectToDevice(thisDevice);
-        connectingPanel.transform.Find("DeviceName").GetComponent<TMPro.TMP_Text>().text = thisDevice.name;
+        //connectingPanel.transform.Find("DeviceName").GetComponent<TMPro.TMP_Text>().text = thisDevice.name;
     }
 
     public void onDisconnectButton()
@@ -63,7 +64,7 @@ public class BluetoothUIManager : MonoBehaviour
         state = uistate.Disconnected;
         for (int i = 0; i < maxMessages; i++)
         {
-            consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = "";
+            //consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = "";
         }
     }
 
@@ -112,8 +113,8 @@ public class BluetoothUIManager : MonoBehaviour
     public void onConnected()
     {
         state = uistate.Connected;
-        connectedPanel.transform.Find("DeviceName").GetComponent<TMPro.TMP_Text>().text = thisDevice.name;
-        connectedPanel.transform.Find("DeviceMac").GetComponent<TMPro.TMP_Text>().text = thisDevice.mac;
+        //connectedPanel.transform.Find("DeviceName").GetComponent<TMPro.TMP_Text>().text = thisDevice.name;
+        //connectedPanel.transform.Find("DeviceMac").GetComponent<TMPro.TMP_Text>().text = thisDevice.mac;
     }
 
     public void onError(string errorMessage)
@@ -133,13 +134,13 @@ public class BluetoothUIManager : MonoBehaviour
         }
         for (int i = 0; i < activeMessages.Count; i++)
         {
-            consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = activeMessages[i];
+            //consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = activeMessages[i];
         }
         if (activeMessages.Count < maxMessages)
         {
             for (int i = activeMessages.Count; i < maxMessages; i++)
             {
-                consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = "";
+                //consolePanel.transform.Find("ConsoleContent" + i.ToString()).GetComponent<TMPro.TMP_Text>().text = "";
             }
         }
     }
