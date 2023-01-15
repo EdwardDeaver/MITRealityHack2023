@@ -34,13 +34,13 @@ public class JSONResponseModel : MonoBehaviour
     void Update()
     {
 
-        FREQTEXT.text = Pot1P33.ToString();
+        FREQTEXT.text = this.FREQ.ToString();
         Debug.Log(Pot1P33.ToString());
 
-        AMPTEXT.text = Pot2P25.ToString();
+        AMPTEXT.text = this.AMP.ToString();
         Debug.Log(Pot2P25.ToString());
 
-        LFOTEXT.text = Pot3P26.ToString();
+        LFOTEXT.text = this.LFO.ToString();
         Debug.Log(Pot3P26.ToString());
 
         BUTTON1TEXT.text = this.NOTE1.ToString();
