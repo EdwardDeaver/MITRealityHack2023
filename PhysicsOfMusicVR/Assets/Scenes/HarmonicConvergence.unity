@@ -2930,9 +2930,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1810694187033048903, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+    - target: {fileID: 1810694186949012478, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694187033048903, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1810694187086086149, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_text
@@ -2945,6 +2949,10 @@ PrefabInstance:
     - target: {fileID: 1810694187298857890, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_fontSize
       value: 15.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694187450371423, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810694187513108073, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_text
@@ -3026,11 +3034,15 @@ PrefabInstance:
     - target: {fileID: 1810694187548873692, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: consolePanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1864985598}
     - target: {fileID: 1810694187548873692, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: connectingPanel
       value: 
       objectReference: {fileID: 1388110560}
+    - target: {fileID: 1810694187711410572, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1810694187711410573, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -3039,9 +3051,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1810694187834473438, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1810694187934517894, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694187934517914, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 961739752}
+    - target: {fileID: 1810694188033203566, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188136510377, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
@@ -3057,6 +3081,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188259077040, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694188409736461, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694188411452192, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188411452206, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
@@ -3113,15 +3145,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188489266312, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_text
-      value: Welcome! Press "Connect" to activate your guitar!
+      value: Welcome! Press "Connect"
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188489266312, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_fontSize
-      value: 11.45
+      value: 15.45
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188489266312, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_margin.w
       value: -2.9242437
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694188489266359, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 22.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694188489266359, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 32.6
       objectReference: {fileID: 0}
     - target: {fileID: 1810694188526057937, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
@@ -3131,7 +3171,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1810694188724292446, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1810694188878589420, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694188917394189, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810694189012990754, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -8479,6 +8531,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01b544a1682cb534aaf97da507be4a22, type: 3}
   m_PrefabInstance: {fileID: 1862257546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1864985598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1810694188411452206, guid: c94e767efb55a4c40b5493c023fef28c, type: 3}
+  m_PrefabInstance: {fileID: 877326202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1877874471
 GameObject:
