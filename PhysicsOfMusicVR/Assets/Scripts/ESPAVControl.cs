@@ -44,7 +44,7 @@ public class ESPAVControl : MonoBehaviour
         _audioObjects[0].enabled = _jsonResponseModel.NOTE1;
         _audioObjects[1].enabled = _jsonResponseModel.NOTE2;
         _audioObjects[2].enabled = _jsonResponseModel.NOTE3;
-        _audioObjects[3].enabled = _jsonResponseModel.NOTE4;
+        //_audioObjects[3].enabled = _jsonResponseModel.NOTE4;
     }
 
     void LinkVFX()
@@ -73,13 +73,13 @@ public class ESPAVControl : MonoBehaviour
         {
             _particleWaves[2].SendEvent(_vfxStopEvent);
         }
-        if(_jsonResponseModel.NOTE4)
-        {
-            _particleWaves[3].SendEvent(_vfxPlayEvent);
-        }
-        if(!_jsonResponseModel.NOTE4)
-        {
-            _particleWaves[3].SendEvent(_vfxStopEvent);
-        }
+        // if(_jsonResponseModel.NOTE4)
+        // {
+        //     _particleWaves[3].SendEvent(_vfxPlayEvent);
+        // }
+        // if(!_jsonResponseModel.NOTE4)
+        // {
+        //     _particleWaves[3].SendEvent(_vfxStopEvent);
+        // }
     }
 }

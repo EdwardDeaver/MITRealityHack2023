@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ESPAudioVFXLink.unity
-    guid: d9fc98dee06a50c4ea28425edc9d2352
+    path: Assets/Scenes/HarmonicConvergence.unity
+    guid: 368a1d91302623e42acee7b2061cb6ee
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bbe53c9ffa3bb7b47ab2047503886e88, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 74e0ffed32445ad408149bcb41270704, type: 2}
