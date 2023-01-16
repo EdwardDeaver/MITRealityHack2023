@@ -415,10 +415,10 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 10000
+      - m_Value: 1000
         m_Name: ParticleCount
         m_Overridden: 1
-      - m_Value: 20
+      - m_Value: 1
         m_Name: LiftSpeed
         m_Overridden: 1
       - m_Value: 0
@@ -427,7 +427,7 @@ VisualEffect:
       - m_Value: 1.5
         m_Name: Amplitude
         m_Overridden: 1
-      - m_Value: 512
+      - m_Value: 120
         m_Name: Frequency
         m_Overridden: 1
     m_Vector2f:
@@ -2291,10 +2291,10 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 10000
+      - m_Value: 1000
         m_Name: ParticleCount
         m_Overridden: 1
-      - m_Value: 20
+      - m_Value: 1
         m_Name: LiftSpeed
         m_Overridden: 1
       - m_Value: 0
@@ -6679,10 +6679,10 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 5000
+      - m_Value: 1000
         m_Name: ParticleCount
         m_Overridden: 1
-      - m_Value: 20
+      - m_Value: 1
         m_Name: LiftSpeed
         m_Overridden: 1
       - m_Value: 0
@@ -6691,7 +6691,7 @@ VisualEffect:
       - m_Value: 1.5
         m_Name: Amplitude
         m_Overridden: 1
-      - m_Value: 1024
+      - m_Value: 180
         m_Name: Frequency
         m_Overridden: 1
     m_Vector2f:
